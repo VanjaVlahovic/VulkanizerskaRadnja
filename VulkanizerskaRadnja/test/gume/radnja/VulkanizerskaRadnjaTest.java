@@ -92,7 +92,7 @@ public class VulkanizerskaRadnjaTest {
 	 */
 	@Test 
 	public void testPronadjiGumuMarkaNull() {
-		r.pronadjiGumu(null);
+		assertEquals(null, r.pronadjiGumu(null));
 	}
 
 	@Test
