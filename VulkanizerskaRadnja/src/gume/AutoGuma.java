@@ -62,10 +62,10 @@ public class AutoGuma {
 	 * Postavlja novu vrednost za velicinu precnika gume
 	 * @param precnik nova vrednost za velicinu precnika
 	 * @throws java.lang.RuntimeException ako je
-	 * unet precnik manji od 13 i veci od 22
+	 * unet precnik manji od 13 ili veci od 22
 	 */
 	public void setPrecnik(int precnik) {
-		if (precnik < 13 && precnik > 22)
+		if (precnik < 13 || precnik > 22)
 			throw new RuntimeException("Precnik van opsega");
 	
 		this.precnik = precnik;
@@ -81,10 +81,10 @@ public class AutoGuma {
 	 * Postavlja novu vrednost za sirinu gume
 	 * @param sirina nova vrednost za sirinu gume
 	 * @throws java.lang.RuntimeException ako je 
-	 * uneta sirina manja od 135 i veca od 355
+	 * uneta sirina manja od 135 ili veca od 355
 	 */
 	public void setSirina(int sirina) {
-		if (sirina < 135 && sirina > 355)
+		if (sirina < 135 || sirina > 355)
 			throw new RuntimeException("Sirina van opsega");
 	
 		this.sirina = sirina;
@@ -121,6 +121,7 @@ public class AutoGuma {
 	 * Proverava da su uneti objekti isti
 	 * @return true ako su isti, u suprotnom false
 	 */
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
