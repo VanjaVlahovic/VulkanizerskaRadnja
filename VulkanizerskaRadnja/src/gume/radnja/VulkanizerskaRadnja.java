@@ -3,10 +3,25 @@ package gume.radnja;
 import java.util.LinkedList;
 
 import gume.AutoGuma;
-
+/**
+ * 
+ * @author Vanja Vlahovic
+ * @version 1.0
+ *
+ */
 public class VulkanizerskaRadnja {
+	/**
+	 * Lista guma dostupnih u vulkanizersoj radnji
+	 */
 	private LinkedList<AutoGuma> gume =	new LinkedList<AutoGuma>();
-			
+	
+	/**
+	 * Dodaje novu gumu u magacin vulkanizerske radnje
+	 * @param a nova guma koja se dodaje u radnju, na pocetak liste
+	 * @throws java.lang.NullPointerException ako je uneta guma null
+	 * @throws java.lang.RuntimeException  ako se ista takva guma 
+	 * vec nalazi u radnji 
+	 */
 	public void dodajGumu(AutoGuma a) {
 		if (a == null)
 			throw new NullPointerException("Guma ne sme biti null");
@@ -17,6 +32,13 @@ public class VulkanizerskaRadnja {
 		gume.addFirst(a);
 	}
 
+	/**
+	 *  Pronalazi i vraca listu sa svim gumama koje su trazenog modela i marke.
+	 *  
+	 * @param markaModel naziv marke i modela knjige
+	 * @return null ako atribut markaModel ima null vrednost,
+	 * u suprotnom listu guma koje odgovaraju upitu
+	 */
 	public LinkedList<AutoGuma> pronadjiGumu(String markaModel) {
 		if (markaModel == null)
 			return null;
