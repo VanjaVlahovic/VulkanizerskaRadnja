@@ -4,6 +4,7 @@ import java.util.LinkedList;
 
 import gume.AutoGuma;
 /**
+ * Klasa koja predstavlja vulkanizersku radnju
  * 
  * @author Vanja Vlahovic
  * @version 1.0
